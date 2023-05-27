@@ -3,6 +3,7 @@
 <p>This repository contains Lambda functions for implementing AWS CIS (Center for Internet Security) best practices policy controls. The functions are designed to check and enforce various security controls in an AWS environment.</p>
 
 <h2>AWS Best Practices Policy Controls</h2>
+Controls will be updated in the future!
 <ul>
   <li>CID:115 - Ensure that EBS Volumes attached to EC2 instances are encrypted</li>
   <li>CID:116 - Ensure that Unattached EBS Volumes are encrypted</li>
