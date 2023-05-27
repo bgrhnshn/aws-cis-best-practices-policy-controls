@@ -52,7 +52,7 @@
 <p>To use the Lambda functions:</p>
 
 <ol>
-  <li>Clone the repository: <code>git clone &lt;repository_url&gt;</code></li>
+  <li>Clone the repository: <code>git clone https://github.com/bgrhnshn/aws-cis-best-practices-policy-controls.git</code></li>
   <li>Set up the required configurations for the <code>Main</code> Lambda function.</li>
   <li>Deploy the Lambda functions to AWS Lambda.</li>
   <li>Configure the necessary triggers or schedule the <code>Main</code> function to run at the desired intervals.</li>
