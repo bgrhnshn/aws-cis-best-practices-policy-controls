@@ -62,7 +62,3 @@
 <h2>AWS Best Practices Policy</h2>
 
 <p>For detailed information on AWS CIS best practices policy controls, please refer to the <a href="AWS%20Best%20Practices%20Policy.pdf">AWS Best Practices Policy document</a>.</p>
-
-<h2>License</h2>
-
-<p>This project is licensed under the <a href="LICENSE">MIT License</a>.</p>
