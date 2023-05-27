@@ -4,7 +4,7 @@ import datetime
 import importlib.util
 
 # Define your S3 bucket name here
-S3_BUCKET_NAME = 'tst123214512674812416247128941'
+S3_BUCKET_NAME = ''
 RESULTS_FOLDER = 'control_results'
 
 def upload_results_to_s3(account_id, date):
