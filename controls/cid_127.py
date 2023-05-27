@@ -14,7 +14,7 @@ CONTROL_DESCRIPTION = "Ensure AWS EBS Volume snapshots are encrypted"
 def main():
     print(CONTROL_DESCRIPTION)
 
-    with open('cid_127_controls.csv', mode='w', newline='') as csv_file:
+    with open('/tmp/cid_127_controls.csv', mode='w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file)
         csv_writer.writerow(["Count", "Snapshot ID", "Region", "Result", "Owner ID"])
         count = 1

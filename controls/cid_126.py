@@ -11,7 +11,7 @@ CONTROL_DESCRIPTION = "Ensure AMIs owned by an AWS account are encrypted"
 def main():
     print(CONTROL_DESCRIPTION)
 
-    with open('cid_126_controls.csv', mode='w', newline='') as csv_file:
+    with open('/tmp/cid_126_controls.csv', mode='w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file)
         csv_writer.writerow(["Count", "Image ID", "Region", "Result", "Owner ID", "Evidence"])
         count = 1

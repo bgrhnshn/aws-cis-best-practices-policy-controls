@@ -4,18 +4,18 @@ import datetime
 import importlib.util
 
 # Define your S3 bucket name here
-S3_BUCKET_NAME = 'your-bucket-name'
+S3_BUCKET_NAME = 'tst123214512674812416247128941'
 RESULTS_FOLDER = 'control_results'
 
 def upload_results_to_s3(account_id, date):
     """Upload all control results to S3"""
     s3_client = boto3.client('s3')
-    control_files = [f for f in os.listdir('controls') if f.endswith('_controls.csv')]
+    control_files = [f for f in os.listdir('/tmp') if f.endswith('_controls.csv')]
     for control_file in control_files:
         # Create S3 object name based on account_id and date
         object_name = f"{RESULTS_FOLDER}/{account_id}/{date}/{control_file}"
         try:
-            s3_client.upload_file(f'controls/{control_file}', S3_BUCKET_NAME, object_name)
+            s3_client.upload_file(f'/tmp/{control_file}', S3_BUCKET_NAME, object_name)
             print(f"Uploaded {control_file} to s3://{S3_BUCKET_NAME}/{object_name}")
         except Exception as e:
             print(f"Error uploading {control_file} to S3: {str(e)}")
@@ -34,9 +34,10 @@ def run_controls():
         control_module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(control_module)
         # Run the control
-        print(f"Running control: {control_script}")
+        print("-------------------------------------------------")
+        print(f"[+] Running control: {control_script}\n")
         control_module.main()
-        print(f"Finished running control: {control_script}")
+        print(f"\n[+] Finished running control: {control_script}")
 
     # After all controls have been run and results saved to CSV files,
     # upload the CSV files to S3

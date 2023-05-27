@@ -11,7 +11,7 @@ CONTROL_DESCRIPTION = "Ensure that Unattached EBS Volumes are encrypted"
 def main():
     print(CONTROL_DESCRIPTION)
 
-    with open('cid_116_controls.csv', mode='w', newline='') as csv_file:
+    with open('/tmp/cid_116_controls.csv', mode='w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file)
         csv_writer.writerow(["Count", "Volume ID", "Region", "Result", "Evidence"])
         count = 1

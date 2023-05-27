@@ -27,7 +27,7 @@ def control(ec2_client, volume_id):
 def main():
     print(CONTROL_DESCRIPTION)
 
-    with open('cid_115_controls.csv', mode='w', newline='') as csv_file:
+    with open('/tmp/cid_115_controls.csv', mode='w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file)
         csv_writer.writerow(["#", "Volume ID", "Instance ID", "Region", "Result", "Evidence"])
         count = 1
